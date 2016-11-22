@@ -12,6 +12,7 @@
 		91FA6C8E1DE4A8F500200E2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FA6C8C1DE4A8F500200E2E /* Main.storyboard */; };
 		91FA6C901DE4A8F500200E2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FA6C8F1DE4A8F500200E2E /* Assets.xcassets */; };
 		91FA6C931DE4A8F500200E2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FA6C911DE4A8F500200E2E /* LaunchScreen.storyboard */; };
+		91FA6C9B1DE4ADC200200E2E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA6C9A1DE4ADC200200E2E /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		91FA6C8F1DE4A8F500200E2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91FA6C921DE4A8F500200E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91FA6C941DE4A8F500200E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FA6C9A1DE4ADC200200E2E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				91FA6C881DE4A8F500200E2E /* AppDelegate.swift */,
 				91FA6C8A1DE4A8F500200E2E /* ViewController.swift */,
+				91FA6C9A1DE4ADC200200E2E /* ImageCell.swift */,
 				91FA6C8C1DE4A8F500200E2E /* Main.storyboard */,
 				91FA6C8F1DE4A8F500200E2E /* Assets.xcassets */,
 				91FA6C911DE4A8F500200E2E /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				91FA6C8B1DE4A8F500200E2E /* ViewController.swift in Sources */,
 				91FA6C891DE4A8F500200E2E /* AppDelegate.swift in Sources */,
+				91FA6C9B1DE4ADC200200E2E /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

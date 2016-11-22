@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParallaxTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vB7-Gx-pfu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="250" id="bh2-zf-QPa" customClass="ImageCell" customModule="ParallaxTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bh2-zf-QPa" id="hJ0-dI-Jbf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image5" translatesAutoresizingMaskIntoConstraints="NO" id="ksi-Df-SM8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="pQs-3O-yO1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-He-nzl">
+                                                    <rect key="frame" x="155" y="107" width="66" height="36"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="KwE-He-nzl" firstAttribute="centerX" secondItem="hJ0-dI-Jbf" secondAttribute="centerX" id="5yu-rY-X9f"/>
+                                                <constraint firstItem="KwE-He-nzl" firstAttribute="centerY" secondItem="hJ0-dI-Jbf" secondAttribute="centerY" id="ZhW-F2-FAf"/>
+                                                <constraint firstItem="ksi-Df-SM8" firstAttribute="top" secondItem="hJ0-dI-Jbf" secondAttribute="top" id="ffb-1q-lXv"/>
+                                                <constraint firstAttribute="trailing" secondItem="ksi-Df-SM8" secondAttribute="trailing" id="uLw-Hd-mPn"/>
+                                                <constraint firstItem="ksi-Df-SM8" firstAttribute="leading" secondItem="hJ0-dI-Jbf" secondAttribute="leading" id="w7Q-Ea-c5G"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageTitle" destination="KwE-He-nzl" id="egY-jo-18A"/>
+                                            <outlet property="parallaxImage" destination="ksi-Df-SM8" id="VX6-cV-YMy"/>
+                                            <outlet property="parallaxImageHeight" destination="pQs-3O-yO1" id="ycf-A5-aUu"/>
+                                            <outlet property="parallaxTopConstraint" destination="ffb-1q-lXv" id="i7l-eI-nzf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vB7-Gx-pfu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="47R-3U-GCu"/>
+                            <constraint firstItem="vB7-Gx-pfu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8DO-MY-05o"/>
+                            <constraint firstAttribute="trailing" secondItem="vB7-Gx-pfu" secondAttribute="trailing" id="gPg-hH-OTv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vB7-Gx-pfu" secondAttribute="bottom" id="rUS-qL-O1S"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="vB7-Gx-pfu" id="7P6-wN-WfV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image5" width="5184" height="3456"/>
+    </resources>
 </document>
